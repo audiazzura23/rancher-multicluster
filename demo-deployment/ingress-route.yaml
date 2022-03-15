@@ -7,12 +7,12 @@ spec:
   entryPoints:
     - web
   routes:
-  - match: Host(`demo.rancher.test`)
+  - match: Host(`primary.demo.rancher.test`)
     kind: Rule
     services:
     - name: rancher-demo-primary
       port: 80
-  - match: Host(`demo.rancher.test`) && PathPrefix(`/secondary`)
+  - match: Host(`secondary.demo.rancher.test`)
     kind: Rule
     services:
     - name: rancher-demo-secondary
