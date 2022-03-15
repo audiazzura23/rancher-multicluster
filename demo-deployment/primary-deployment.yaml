@@ -18,7 +18,7 @@ spec:
       - name: rancher-demo-primary
         image: monachus/rancher-demo
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         env:
         - name: COW_COLOR
           value: red
