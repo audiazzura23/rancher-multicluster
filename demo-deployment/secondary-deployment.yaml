@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
       - name: rancher-demo-secondary
-        image: audiazzura23/rancher-demo
+        image: monachus/rancher-demo
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         env:
         - name: COW_COLOR
           value: darkblue
