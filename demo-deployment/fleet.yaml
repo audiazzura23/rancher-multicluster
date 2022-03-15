@@ -1,4 +1,4 @@
-namespace: fleet-default
+namespace: default
 targetCustomizations:
 - name: cluster1
   clusterSelector:
