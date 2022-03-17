@@ -1,0 +1,8 @@
+spec:
+  template:
+    spec:
+      containers:
+      - name: rancher-demo-secondary
+        env:
+        - name: COW_COLOR
+          value: blue

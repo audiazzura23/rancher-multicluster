@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rancher-demo-secondary
+  labels:
+    app: rancher-demo-secondary
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rancher-demo-secondary
+  template:
+    metadata:
+      labels:
+        app: rancher-demo-secondary
+    spec:
+      containers:
+      - name: rancher-demo-secondary
+        image: monachus/rancher-demo
+        ports:
+        - containerPort: 8080
+        env:
+        - name: COW_COLOR
+          value: darkblue
