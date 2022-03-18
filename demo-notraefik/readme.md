@@ -13,8 +13,7 @@ MetalLB is required to be installed and configured on all clusters before deploy
 2. Create cluster group in `Continuous Delivery -> Cluster Groups` and add the clusters into the group
 3. Create a new repo in `Continuous Delivery -> Git Repos`
 4. Create an external load balancer pointing to external IPs of the traefik services in each clusters
-5. Set a local DNS entry of hostname `primary.rancher.demo.test` and `secondary.rancher.demo.test`, both pointing to the external load balancer
-6. Acces both hostnames, and verify that the deployment is working
+5. Acces the ip of the external load balancer, and verify that the deployment is working
 
 ## Cleanup
 Just delete the repo in `Continuous Delivery -> Git Repos`
