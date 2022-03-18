@@ -1,10 +1,12 @@
 # Simple Example
 
 This example will deploy the [rancher-demo](https://hub.docker.com/r/monachus/rancher-demo) application into `default` namespace.
-This app will cycle between all active pods within the same service on a cluster and will failover to another cluster if the current one is down.
+This app will cycle between all active pods within the same service on every cluster that the service enabled*.
+
+*Note[Bug]: Somehow the connection only round robin to 1 cluster (eg. if there's 6 service split between 2 clusters, it'll only show 3 node on a cluster, but it does failover to another cluster if the first cluster is down. And if accessed with another browser/computer, chances are it will show the other 3 nodes). 
 
 ## Prerequisite
-Traefik and MetalLB is required to be installed and set on all clusters before deploying these.
+Traefik and MetalLB is required to be installed and configured on all clusters before deploying these.
 
 ## Usage
 1. Add the label `cluster: one` or `cluster: two` to each clusters
