@@ -1,0 +1,14 @@
+namespace: default
+targetCustomizations:
+- name: cluster1
+  clusterSelector:
+    matchLabels:
+      cluster: one
+  
+- name: cluster2
+  clusterSelector:
+    matchLabels:
+      cluster: two
+  yaml:
+    overlays:
+    - color

@@ -1,0 +1,14 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: demo-ingress-route
+  namespace: default
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`primary.demo.rancher.test`)
+    kind: Rule
+    services:
+    - name: rancher-demo-primary
+      port: 80
